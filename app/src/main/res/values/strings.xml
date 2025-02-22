@@ -4,4 +4,6 @@
     <string name="add">ADD</string>
     <string name="next">NEXT</string>
     <string name="make">MAKE BUDGET</string>
+    <string name="expense_name">Expense Name</string>
+    <string name="amount">Amount</string>
 </resources>

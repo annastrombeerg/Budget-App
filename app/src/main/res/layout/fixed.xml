@@ -3,56 +3,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp"
+    android:padding="16sp"
     package="com.budgy">
 
-    <!-- Expense Name Input Field -->
     <EditText
         android:id="@+id/expense_name"
-        android:hint="Expense Name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:hint="@string/expense_name"
+        android:layout_width="0sp"
+        android:layout_height="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:inputType="text" />
 
-    <!-- Expense Amount Input Field -->
     <EditText
         android:id="@+id/expense_amount"
-        android:hint="Amount"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:hint="@string/amount"
+        android:layout_width="0sp"
+        android:layout_height="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/expense_name"
         android:inputType="numberDecimal" />
 
-    <!-- Add Expense Button -->
     <Button
         android:id="@+id/add_expense_button"
-        android:text="ADD"
-        android:textColor="#FFFFFF"
-        android:background="#F1C40F"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/expense_amount"
+        android:layout_width="320sp"
+        android:layout_height="53sp"
+        android:layout_marginTop="204sp"
+        style="@style/BudgyButton"
+        android:text="@string/add"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:cornerRadius="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expense_amount" />
 
-    <!-- Expense List -->
-    <!-- Add a RecyclerView here to display added expenses -->
-
-    <!-- Next Button -->
     <Button
-        android:id="@+id/next_button"
-        android:text="NEXT"
-        android:textColor="#FFFFFF"
-        android:background="#F1C40F"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/add_expense_button"
+        android:id="@+id/make_button"
+        android:layout_width="320sp"
+        android:layout_height="53sp"
+        android:layout_marginTop="296sp"
+        style="@style/BudgyButton"
+        android:text="@string/make"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:cornerRadius="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_expense_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
