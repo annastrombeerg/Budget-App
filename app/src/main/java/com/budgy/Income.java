@@ -1,4 +1,23 @@
 package com.budgy;
 
-public class Income {
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Income extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.income);
+
+        Button nextButton = findViewById(R.id.next_button);
+        nextButton.setOnClickListener(v -> {
+            //Navigera till nästa sida
+            Intent intent = new Intent(Income.this, FixedExpense.class);
+            startActivity(intent);
+        });
+    }
 }
