@@ -7,10 +7,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/topPanel"
-        android:layout_width="0dp"
-        android:layout_height="95dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp"
+        android:layout_width="0sp"
+        android:layout_height="95sp"
+        android:background="@drawable/rounded_bottom"
+        app:cardElevation="4sp"
         app:cardBackgroundColor="@color/purple"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- Title Text Inside the Rounded Panel -->
             <TextView
                 android:id="@+id/title_text"
                 android:layout_width="wrap_content"
@@ -46,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topPanel" />
+        app:layout_constraintTop_toBottomOf="@+id/topPanel"/>
 
     <EditText
         android:id="@+id/expense_amount"
