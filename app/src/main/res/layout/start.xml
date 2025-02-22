@@ -3,13 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/logo_image"
         android:layout_width="124dp"
         android:layout_height="92dp"
-        android:src="@drawable/AppIcon"
+        android:src="@drawable/appicon"
         app:layout_constraintBottom_toTopOf="@+id/start_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -41,6 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_name" />
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        tools:ignore="ContrastRatio"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
