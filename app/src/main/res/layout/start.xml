@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="16sp"
     package="com.budgy">
 
     <ImageView
@@ -25,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56sp"
         android:text="@string/app_name"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -38,9 +37,8 @@
         android:layout_height="50sp"
         android:layout_marginTop="200sp"
         android:background="@color/purple"
-        android:text="GET STARTED NOW"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="20sp"
+        android:text="@string/start"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"

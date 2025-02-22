@@ -5,5 +5,9 @@
     <string name="next">NEXT</string>
     <string name="make">MAKE BUDGET</string>
     <string name="expense_name">Expense Name</string>
+    <string name="variable_expense">ADD VARIABLE EXPENSES</string>
+    <string name="fixed_expense">ADD FIXED EXPENSES</string>
+    <string name="loan_credit">ADD LOANS AND CREDITS</string>
+    <string name="start">GET STARTED NOW</string>
     <string name="amount">Amount</string>
 </resources>
