@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.budgy">
 
     <!-- Expense Name Input Field -->
@@ -11,7 +10,7 @@
         android:id="@+id/expense_name"
         android:hint="Expense Name"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,22 +21,19 @@
         android:id="@+id/expense_amount"
         android:hint="Amount"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/expense_name"
         android:inputType="numberDecimal" />
 
-    <!-- Add Expense Button -->
-
-    <!-- Make Button -->
 
     <Button
         android:id="@+id/add_expense_button"
         android:layout_width="320dp"
         android:layout_height="53dp"
         android:layout_marginTop="204dp"
-        android:background="#F1C40F"
+        style="@style/BudgyButton"
         android:text="@string/add"
         android:textSize="25sp"
         android:textColor="@color/black"
@@ -51,14 +47,13 @@
         android:layout_width="320dp"
         android:layout_height="53dp"
         android:layout_marginTop="296dp"
-        android:background="#F1C40F"
+        style="@style/BudgyButton"
         android:text="@string/make"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_expense_button"
-        tools:ignore="ContrastRatio" />
+        app:layout_constraintTop_toBottomOf="@+id/add_expense_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

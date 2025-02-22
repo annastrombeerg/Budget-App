@@ -1,7 +1,7 @@
 <resources
     package="com.budgy">
     <string name="app_name">Budgy</string>
-    <string add="add">ADD</string>
-    <string next="next">NEXT</string>
-    <string make="add">MAKE BUDGET</string>
+    <string name="add">ADD</string>
+    <string name="next">NEXT</string>
+    <string name="make">MAKE BUDGET</string>
 </resources>
