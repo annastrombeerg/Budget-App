@@ -8,12 +8,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoanAndCredit extends AppCompatActivity {
 
+    Button nextButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loanandcredit);
 
-        Button nextButton = findViewById(R.id.next_button);
+        nextButton = findViewById(R.id.next_button);
         nextButton.setOnClickListener(v -> {
             //Navigera till nästa sida
             Intent intent = new Intent(LoanAndCredit.this, VariableExpense.class);

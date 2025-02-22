@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
-    android:background="#f0f0f0">
+    android:background="#f0f0f0"
+    package="com.budgy">
 
     <!-- Expense Name Input Field -->
     <EditText
@@ -45,7 +46,7 @@
 
     <!-- Next Button -->
     <Button
-        android:id="@+id/next_button_fixed_expenses"
+        android:id="@+id/next_button"
         android:text="NEXT"
         android:textColor="#FFFFFF"
         android:background="#F1C40F"
