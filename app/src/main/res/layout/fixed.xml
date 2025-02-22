@@ -5,35 +5,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     package="com.budgy">
 
-    <androidx.cardview.widget.CardView
+    <Button
         android:id="@+id/topPanel"
-        android:layout_width="0sp"
-        android:layout_height="95sp"
-        app:cardCornerRadius="20sp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="@color/purple"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="411dp"
+        android:layout_height="89dp"
+        android:text="@string/fixed_expense"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_bottom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/title_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/fixed_expense"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/expense_name"
@@ -45,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topPanel" />
+        app:layout_constraintTop_toBottomOf="@+id/topPanel"/>
 
     <EditText
         android:id="@+id/expense_amount"
@@ -63,7 +46,7 @@
         style="@style/BudgyButton"
         android:layout_width="320sp"
         android:layout_height="53sp"
-        android:layout_marginTop="80sp"
+        android:layout_marginTop="44dp"
         android:text="@string/add"
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -75,17 +58,17 @@
 
     <Button
         android:id="@+id/make_button"
+        style="@style/BudgyButton"
         android:layout_width="320sp"
         android:layout_height="53sp"
-        android:layout_marginTop="296sp"
-        style="@style/BudgyButton"
-        android:text="@string/make"
+        android:layout_marginTop="324dp"
+        android:text="@string/next"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:cornerRadius="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_expense_button"/>
+        app:layout_constraintTop_toBottomOf="@+id/add_expense_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
