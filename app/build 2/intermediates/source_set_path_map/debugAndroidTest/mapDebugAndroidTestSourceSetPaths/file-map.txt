@@ -1,5 +1,0 @@
-com.budgy.test.app-core-1.6.1-0 /Users/anna/.gradle/caches/transforms-3/593378f4161090b8ed1f858db5bc93b0/transformed/core-1.6.1/res
-com.budgy.test.app-androidTest-1 /Users/anna/Desktop/AndroidStudio/BudgetApp/app/build/generated/res/resValues/androidTest/debug
-com.budgy.test.app-mergeDebugAndroidTestResources-2 /Users/anna/Desktop/AndroidStudio/BudgetApp/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.budgy.test.app-mergeDebugAndroidTestResources-3 /Users/anna/Desktop/AndroidStudio/BudgetApp/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.budgy.test.app-debugAndroidTest-4 /Users/anna/Desktop/AndroidStudio/BudgetApp/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources
