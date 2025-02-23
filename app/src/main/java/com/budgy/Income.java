@@ -6,15 +6,12 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.text.BreakIterator;
 
 public class Income extends AppCompatActivity {
 
     Button nextButton;
-    EditText income, incomeAmount;
+    EditText income;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +22,15 @@ public class Income extends AppCompatActivity {
         income = findViewById(R.id.income_amount);
 
         if (Expense.getIncome() > 0) {
-            incomeAmount.setText(String.valueOf(Expense.getIncome()));
+            income.setText(String.valueOf(Expense.getIncome()));
         }
 
         nextButton.setOnClickListener(v -> {
-            double income = 0;
-            if (!incomeAmount.getText().toString().isEmpty()) {
-                income = Double.parseDouble(incomeAmount.getText().toString());
+            double incomeValue = 0;
+            if (!income.getText().toString().isEmpty()) {
+                incomeValue = Double.parseDouble(income.getText().toString().replace(" KR", "").trim());
             }
-            Expense.setIncome(income);
+            Expense.setIncome(incomeValue);
             //Navigera till nästa sida
             Intent intent = new Intent(Income.this, FixedExpense.class);
             startActivity(intent);

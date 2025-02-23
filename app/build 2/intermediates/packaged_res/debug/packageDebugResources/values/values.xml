@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Fixed">#087E8B</color>
+    <color name="Income">#B8E1FF</color>
+    <color name="LoanAndCredit">#FFF275</color>
+    <color name="Variable">#C492B1</color>
+    <color name="black">#000000</color>
+    <color name="blue">#087E8B</color>
+    <color name="grey">#BFD1D1D1</color>
+    <color name="lightblue">#B8E1FF</color>
+    <color name="pink">#C492B1</color>
+    <color name="purple">#553E4E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFF275</color>
+    <string name="add">ADD</string>
+    <string name="amount">Amount</string>
+    <string name="app">Your Budget App</string>
+    <string name="app_name">Budgy</string>
+    <string name="balance">BALANCE</string>
+    <string name="budget">BUDGET</string>
+    <string name="expense">EXPENSES</string>
+    <string name="expense_name">Expense Name</string>
+    <string name="fixed_expense">ADD FIXED EXPENSES</string>
+    <string name="fixed_pie">FIXED</string>
+    <string name="income">\n \n INCOME \n \n Income includes: Salary, Allowance, Dividend, Profit and Interest</string>
+    <string name="income_pie">INCOME</string>
+    <string name="loan_credit">ADD LOANS AND CREDITS</string>
+    <string name="loanncred_pie">LOAN/CREDIT</string>
+    <string name="make">MAKE BUDGET</string>
+    <string name="next">NEXT</string>
+    <string name="smart">Be smart with your money!</string>
+    <string name="start">GET STARTED NOW</string>
+    <string name="start_over">START OVER</string>
+    <string name="variable_expense">ADD VARIABLE EXPENSES</string>
+    <string name="variable_pie">VARIABLE</string>
+    <string name="welcome">WELCOME \n Let\'s set up your budget</string>
+    <style name="BudgyButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Theme.Budgy" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/purple</item>  
+        <item name="colorPrimaryVariant">@color/purple</item>  
+        <item name="colorOnPrimary">@color/white</item>  
+
+        
+        <item name="colorSecondary">@color/yellow</item>  
+        <item name="colorSecondaryVariant">@color/yellow</item>  
+        <item name="colorOnSecondary">@color/black</item>  
+
+        
+        <item name="android:colorBackground">@color/grey</item>  
+        <item name="colorSurface">@color/blue</item>  
+        <item name="colorOnSurface">@color/white</item>  
+
+        
+        <item name="android:statusBarColor">@color/purple</item>
+        <item name="android:navigationBarColor">@color/purple</item>
+
+        
+        <item name="android:buttonStyle">@style/BudgyButton</item>
+    </style>
+</resources>
