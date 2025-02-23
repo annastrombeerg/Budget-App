@@ -12,4 +12,6 @@
     <string name="amount">Amount</string>
     <string name="app">Your Budget App</string>
     <string name="smart">Be smart with your money!</string>
+    <string name="welcome">WELCOME \n Let\'s set up your budget</string>
+    <string name="income">\n \n INCOME \n \n Income includes: Salary, Allowance, Dividend, Profit and Interest</string>
 </resources>

@@ -11,6 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Budgy"
-        tools:targetApi="35" />
+        tools:targetApi="35" >
+
+        <!-- Set "Start" as the launcher activity -->
+        <activity android:name=".Start"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Other Activities in the app -->
+        <activity android:name=".Income"/>
+        <activity android:name=".FixedExpense"/>
+        <activity android:name=".LoanAndCredit"/>
+        <activity android:name=".VariableExpense"/>
+        <activity android:name=".Summary"/>
+
+    </application>
 
 </manifest>
