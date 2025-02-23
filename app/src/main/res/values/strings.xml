@@ -10,4 +10,6 @@
     <string name="loan_credit">ADD LOANS AND CREDITS</string>
     <string name="start">GET STARTED NOW</string>
     <string name="amount">Amount</string>
+    <string name="app">Your Budget App</string>
+    <string name="smart">Be smart with your money!</string>
 </resources>
