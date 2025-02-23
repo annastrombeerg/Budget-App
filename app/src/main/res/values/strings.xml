@@ -2,7 +2,15 @@
     package="com.budgy">
     <string name="app_name">Budgy</string>
     <string name="add">ADD</string>
+    <string name="budget">BUDGET</string>
+    <string name="balance">BALANCE</string>
+    <string name="expense">EXPENSES</string>
+    <string name="start_over">START OVER</string>
     <string name="next">NEXT</string>
+    <string name="income_pie">INCOME</string>
+    <string name="fixed_pie">FIXED</string>
+    <string name="loanncred_pie">LOAN/CREDIT</string>
+    <string name="variable_pie">VARIABLE</string>
     <string name="make">MAKE BUDGET</string>
     <string name="expense_name">Expense Name</string>
     <string name="variable_expense">ADD VARIABLE EXPENSES</string>

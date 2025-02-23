@@ -9,10 +9,13 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.BreakIterator;
+
 public class Income extends AppCompatActivity {
 
     Button nextButton;
-    EditText income;
+    EditText income, incomeAmount;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +24,16 @@ public class Income extends AppCompatActivity {
         nextButton = findViewById(R.id.next_button);
         income = findViewById(R.id.income_amount);
 
+        if (Expense.getIncome() > 0) {
+            incomeAmount.setText(String.valueOf(Expense.getIncome()));
+        }
+
         nextButton.setOnClickListener(v -> {
+            double income = 0;
+            if (!incomeAmount.getText().toString().isEmpty()) {
+                income = Double.parseDouble(incomeAmount.getText().toString());
+            }
+            Expense.setIncome(income);
             //Navigera till nästa sida
             Intent intent = new Intent(Income.this, FixedExpense.class);
             startActivity(intent);
