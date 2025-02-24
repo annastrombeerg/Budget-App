@@ -60,6 +60,14 @@ public class Expense {
         return new ArrayList<>(fixedExpenses);
     }
 
+    public static List<Expense> getLoanCreditExpenses() {
+        return new ArrayList<>(fixedExpenses);
+    }
+
+    public static List<Expense> getVariableExpenses() {
+        return new ArrayList<>(fixedExpenses);
+    }
+
     public static void resetData() {
         income = 0;
         fixedExpenses.clear();
@@ -70,6 +78,18 @@ public class Expense {
     public static void removeFixedExpense(int position) {
         if (position >= 0 && position < fixedExpenses.size()) {
             fixedExpenses.remove(position);
+        }
+    }
+
+    public static void removeLoanCreditExpense(int position) {
+        if (position >= 0 && position < loanCredits.size()) {
+            loanCredits.remove(position);
+        }
+    }
+
+    public static void removeVariableExpense(int position) {
+        if (position >= 0 && position < variableExpenses.size()) {
+            variableExpenses.remove(position);
         }
     }
 

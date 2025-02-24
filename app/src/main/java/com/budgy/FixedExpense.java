@@ -41,18 +41,18 @@ public class FixedExpense extends AppCompatActivity implements ExpenseList.OnExp
 
         addExpense.setOnClickListener(v -> {
             String name = expenseName.getText().toString().trim();
-            String amountStr = expenseAmount.getText().toString().trim();
+            String amount = expenseAmount.getText().toString().trim();
 
-            if (!name.isEmpty() && !amountStr.isEmpty()) {
-                double amount = Double.parseDouble(amountStr);
-                Expense.addFixedExpense(name, amount);
+            if (!name.isEmpty() && !amount.isEmpty()) {
+                double addAmount = Double.parseDouble(amount);
+                Expense.addFixedExpense(name, addAmount);
 
-                // Uppdatera listan
+                //Uppdatera listan
                 expenses.clear();
                 expenses.addAll(Expense.getFixedExpenses());
                 adapter.notifyDataSetChanged();
 
-                // Rensa inputfält och uppdatera totalsumman
+                //Rensa inputfält och uppdatera totalsumman
                 expenseName.setText("");
                 expenseAmount.setText("");
                 updateTotalExpense();
@@ -70,7 +70,7 @@ public class FixedExpense extends AppCompatActivity implements ExpenseList.OnExp
     public void onDeleteExpense(int position) {
         Expense.removeFixedExpense(position);
 
-        // Uppdatera listan efter borttagning
+        //Uppdatera listan efter borttagning
         expenses.clear();
         expenses.addAll(Expense.getFixedExpenses());
         adapter.notifyDataSetChanged();
