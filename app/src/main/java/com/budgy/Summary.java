@@ -30,7 +30,10 @@ public class Summary extends AppCompatActivity {
         expenses = findViewById(R.id.expenses_button);
         balanceView = findViewById(R.id.balance);
 
-        double balance = Expense.getIncome() - (Expense.getTotalFixedExpenses() + Expense.getTotalLoanCredits() + Expense.getTotalVariableExpenses());
+        double balance = Expense.getIncome() -
+                (Expense.getTotalFixedExpenses() +
+                        Expense.getTotalLoanCredits() +
+                        Expense.getTotalVariableExpenses());
         balanceView.setText(balance + " KR");
 
         startOver.setOnClickListener(v -> {

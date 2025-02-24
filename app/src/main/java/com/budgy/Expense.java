@@ -61,11 +61,11 @@ public class Expense {
     }
 
     public static List<Expense> getLoanCreditExpenses() {
-        return new ArrayList<>(fixedExpenses);
+        return new ArrayList<>(loanCredits);
     }
 
     public static List<Expense> getVariableExpenses() {
-        return new ArrayList<>(fixedExpenses);
+        return new ArrayList<>(variableExpenses);
     }
 
     public static void resetData() {

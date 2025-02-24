@@ -59,6 +59,8 @@ public class LoanAndCredit extends AppCompatActivity implements ExpenseList.OnEx
         });
 
         nextButton.setOnClickListener(v -> {
+            expenses.clear(); //Rensar RecyclerView-listan
+            adapter.notifyDataSetChanged(); //Uppdaterar listan i UI
             //Navigera till nästa sida
             Intent intent = new Intent(LoanAndCredit.this, VariableExpense.class);
             startActivity(intent);

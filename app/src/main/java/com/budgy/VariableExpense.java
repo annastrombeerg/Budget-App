@@ -45,7 +45,7 @@ public class VariableExpense extends AppCompatActivity implements ExpenseList.On
 
             if (!name.isEmpty() && !amount.isEmpty()) {
                 double addAmount = Double.parseDouble(amount);
-                Expense.addFixedExpense(name, addAmount);
+                Expense.addVariableExpense(name, addAmount);
 
                 //Uppdatera listan
                 expenses.clear();
@@ -60,12 +60,6 @@ public class VariableExpense extends AppCompatActivity implements ExpenseList.On
         });
 
         makeButton.setOnClickListener(v -> {
-            double totalIncome = Expense.getIncome();
-            double totalFixed = Expense.getTotalFixedExpenses();
-            double totalLoan = Expense.getTotalLoanCredits();
-            double totalVariable = Expense.getTotalVariableExpenses();
-            double totalBudget = totalIncome - (totalFixed + totalLoan + totalVariable);
-            Expense.setIncome(totalBudget);
             //Navigera till nästa sida
             Intent intent = new Intent(VariableExpense.this, Summary.class);
             startActivity(intent);

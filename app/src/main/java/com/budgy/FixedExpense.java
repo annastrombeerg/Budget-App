@@ -60,6 +60,8 @@ public class FixedExpense extends AppCompatActivity implements ExpenseList.OnExp
         });
 
         nextButton.setOnClickListener(v -> {
+            expenses.clear(); //Rensar RecyclerView-listan
+            adapter.notifyDataSetChanged(); //Uppdaterar listan i UI
             //Navigera till nästa sida
             Intent intent = new Intent(FixedExpense.this, LoanAndCredit.class);
             startActivity(intent);
