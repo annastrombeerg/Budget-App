@@ -7,12 +7,11 @@
 
     <ImageView
         android:id="@+id/logo_image"
-        android:layout_width="124sp"
-        android:layout_height="92sp"
+        android:layout_width="124dp"
+        android:layout_height="92dp"
         android:src="@drawable/app_icon"
         app:layout_constraintBottom_toTopOf="@+id/start_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.209"/>
@@ -25,8 +24,8 @@
         android:text="@string/app_name"
         android:textColor="@color/black"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_image" />
 
@@ -38,8 +37,8 @@
         android:text="@string/app"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_name" />
 
@@ -53,7 +52,6 @@
         android:textColor="@color/white"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_name" />
 
@@ -66,7 +64,6 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/start_button" />
 

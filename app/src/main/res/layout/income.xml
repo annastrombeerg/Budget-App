@@ -14,7 +14,6 @@
         android:textColor="@color/white"
         android:background="@drawable/rounded_bottom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +29,6 @@
         android:textStyle="bold"
         android:background="@color/pink"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topPanel" />
 
@@ -51,15 +49,14 @@
     <Button
         android:id="@+id/next_button"
         style="@style/BudgyButton"
-        android:layout_width="320sp"
-        android:layout_height="53sp"
+        android:layout_width="320dp"
+        android:layout_height="53dp"
         android:layout_marginTop="236dp"
         android:text="@string/next"
         android:textColor="@color/black"
         android:textSize="25sp"
-        app:cornerRadius="10sp"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/income_amount" />
 
