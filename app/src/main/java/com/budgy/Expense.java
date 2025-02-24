@@ -16,15 +16,6 @@ public class Expense {
         this.name = name;
         this.amount = amount;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
     public static void setIncome(double newIncome) {
         income = newIncome;
     }

@@ -36,7 +36,7 @@ public class VariableExpense extends AppCompatActivity {
 
         addExpense.setOnClickListener(v -> {
             if (!expenseName.getText().toString().isEmpty() && !expenseAmount.getText().toString().isEmpty()) {
-                Expense.addFixedExpense(expenseName.getText().toString(), Double.parseDouble(expenseAmount.getText().toString()));
+                Expense.addVariableExpense(expenseName.getText().toString(), Double.parseDouble(expenseAmount.getText().toString()));
                 expenseName.setText("");
                 expenseAmount.setText("");
             }
