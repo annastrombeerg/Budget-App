@@ -16,6 +16,14 @@ public class Expense {
         this.name = name;
         this.amount = amount;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
     public static void setIncome(double newIncome) {
         income = newIncome;
     }
@@ -48,10 +56,21 @@ public class Expense {
         return variableExpenses.stream().mapToDouble(e -> e.amount).sum();
     }
 
+    public static List<Expense> getFixedExpenses() {
+        return new ArrayList<>(fixedExpenses);
+    }
+
     public static void resetData() {
         income = 0;
         fixedExpenses.clear();
         loanCredits.clear();
         variableExpenses.clear();
     }
+
+    public static void removeFixedExpense(int position) {
+        if (position >= 0 && position < fixedExpenses.size()) {
+            fixedExpenses.remove(position);
+        }
+    }
+
 }
