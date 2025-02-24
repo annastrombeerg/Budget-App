@@ -22,4 +22,5 @@
     <string name="smart">Be smart with your money!</string>
     <string name="welcome">WELCOME \n Let\'s set up your budget</string>
     <string name="income">\n \n INCOME \n \n Income includes: Salary, Allowance, Dividend, Profit and Interest</string>
+    <string name="fixed_info">Fixed expenses are costs in your budget that do not vary from month to month, such as: Rent, Insurance, Membership/Subscription costs, Phone bill etc.</string>
 </resources>
