@@ -7,18 +7,26 @@ Users can also set up a monthly budget and compare their actual expenses with th
 Features:
 
 Add Income: Users can enter their income and specify the amount.
+
 Add Fixed Expenses: Users can record their fixed expenses, such as rent, insurance, subscriptions, etc.
+
 Add Loans and Credits: Enables users to enter loans and credit payments, including monthly payments.
+
 Add Variable Expenses: Users can also track variable expenses, such as groceries, clothes, entertainment, etc.
+
 Visual Summary: The app displays a summary of income and expenses through a pie chart, providing users with a clear overview of how their money is allocated.
+
 Budget Management: Users can set a monthly budget and compare their actual expenses with the budgeted amount to monitor their finances.
 Technologies:
 
 Programming Language: Java
+
 Platform: Android Studio
+
 Design and User Interface: XML for layout and design
-Database: ?? for saving user data (income, expenses, etc.)
+
 Visualization: Pie chart using the MPAndroidChart library to provide a visual summary of the user's budget.
+
 Purpose: The Budget Calculator App is designed to provide users with a simple and effective solution for managing their finances by keeping track of income and expenses in an organized manner. The visual summary and budget management features help users quickly identify whether they are staying within their financial limits and if they need to make adjustments to their spending.
 
 Goal:
