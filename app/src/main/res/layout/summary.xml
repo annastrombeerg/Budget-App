@@ -19,8 +19,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewGraph"
-        android:layout_width="390dp"
-        android:layout_height="299dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="5dp"
@@ -39,8 +39,8 @@
                 android:id="@+id/piechart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingTop="10dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:paddingTop="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,74 +50,79 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="85dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="15dp"
                     android:layout_gravity="center_vertical">
 
                     <View
                         android:layout_width="15dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="15dp"
                         android:background="@color/Income" />
 
                     <TextView
+                        android:id="@+id/income_percentage"
                         android:layout_width="77dp"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="@string/income_pie" />
-
+                        android:paddingLeft="2dp"
+                        android:text="@string/income_pie"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="71dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="15dp"
                     android:layout_gravity="center_vertical">
 
                     <View
                         android:layout_width="15dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="15dp"
                         android:background="@color/Fixed" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/fixed_percentage"
+                        android:layout_width="64dp"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="@string/fixed_pie" />
-
+                        android:paddingLeft="2dp"
+                        android:text="@string/fixed_pie"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="119dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="15dp"
                     android:layout_gravity="center_vertical">
 
                     <View
                         android:layout_width="15dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="15dp"
                         android:background="@color/LoanAndCredit" />
 
                     <TextView
-                        android:layout_width="100dp"
+                        android:id="@+id/loanncred_percentage"
+                        android:layout_width="109dp"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="@string/loanncred_pie" />
-
+                        android:paddingLeft="2dp"
+                        android:text="@string/loanncred_pie"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="98dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="15dp"
                     android:layout_gravity="center_vertical">
 
                     <View
                         android:layout_width="15dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="15dp"
                         android:background="@color/Variable" />
 
                     <TextView
-                        android:layout_width="80dp"
+                        android:id="@+id/variable_percentage"
+                        android:layout_width="88dp"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="@string/variable_pie" />
+                        android:paddingLeft="2dp"
+                        android:text="@string/variable_pie"
+                        android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -128,7 +133,7 @@
         android:id="@+id/balance_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="64dp"
         android:text="@string/balance"
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -140,7 +145,7 @@
         android:id="@+id/balance"
         android:layout_width="167dp"
         android:layout_height="42dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="120dp"
         android:background="@color/purple"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -171,7 +176,7 @@
             android:id="@+id/income_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="@string/income_pie"
+            android:text="@string/income"
             android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/start_over_button"
             app:layout_constraintEnd_toStartOf="@+id/expenses_button"/>

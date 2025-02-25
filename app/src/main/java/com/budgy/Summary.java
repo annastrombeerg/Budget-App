@@ -50,33 +50,37 @@ public class Summary extends AppCompatActivity {
         double totalLoan = Expense.getTotalLoanCredits();
         double totalVariable = Expense.getTotalVariableExpenses();
         double totalBudget = totalIncome + totalFixed + totalLoan + totalVariable;
-        if (totalBudget == 0) return;
+
+        //Hämta TextViews från layouten
+        TextView incomePercentage = findViewById(R.id.income_percentage);
+        TextView fixedPercentage = findViewById(R.id.fixed_percentage);
+        TextView loanPercentage = findViewById(R.id.loanncred_percentage);
+        TextView variablePercentage = findViewById(R.id.variable_percentage);
 
         pieChart.clearChart();
 
-        // Lägg till varje kategori i PieChart med procent
-        if (totalIncome > 0) {
-            float percentage = (float) ((totalIncome / totalBudget) * 100);
-            pieChart.addPieSlice(new PieModel("Income " + String.format("%.1f", percentage) + "%",
-                    (float) totalIncome, Color.parseColor("#B8E1FF")));
-        }
+        if (totalBudget > 0) {
+            float incomePercent = (float) ((totalIncome / totalBudget) * 100);
+            float fixedPercent = (float) ((totalFixed / totalBudget) * 100);
+            float loanPercent = (float) ((totalLoan / totalBudget) * 100);
+            float variablePercent = (float) ((totalVariable / totalBudget) * 100);
 
-        if (totalFixed > 0) {
-            float percentage = (float) ((totalFixed / totalBudget) * 100);
-            pieChart.addPieSlice(new PieModel("Fixed " + String.format("%.1f", percentage) + "%",
-                    (float) totalFixed, Color.parseColor("#087E8B")));
-        }
+            // Uppdatera TextViews med procent
+            incomePercentage.setText("Income: " + String.format("%.1f", incomePercent) + "%");
+            fixedPercentage.setText("Fixed: " + String.format("%.1f", fixedPercent) + "%");
+            loanPercentage.setText("Loan/Credit: " + String.format("%.1f", loanPercent) + "%");
+            variablePercentage.setText("Variable: " + String.format("%.1f", variablePercent) + "%");
 
-        if (totalLoan > 0) {
-            float percentage = (float) ((totalLoan / totalBudget) * 100);
-            pieChart.addPieSlice(new PieModel("Loan/Credit " + String.format("%.1f", percentage) + "%",
-                    (float) totalLoan, Color.parseColor("#FFF275")));
-        }
+            // Lägg till sektorer i PieChart
+            if (totalIncome > 0)
+                pieChart.addPieSlice(new PieModel("Income", (float) totalIncome, Color.parseColor("#B8E1FF")));
+            if (totalFixed > 0)
+                pieChart.addPieSlice(new PieModel("Fixed", (float) totalFixed, Color.parseColor("#087E8B")));
+            if (totalLoan > 0)
+                pieChart.addPieSlice(new PieModel("Loan/Credit", (float) totalLoan, Color.parseColor("#FFF275")));
+            if (totalVariable > 0)
+                pieChart.addPieSlice(new PieModel("Variable", (float) totalVariable, Color.parseColor("#C492B1")));
 
-        if (totalVariable > 0) {
-            float percentage = (float) ((totalVariable / totalBudget) * 100);
-            pieChart.addPieSlice(new PieModel("Variable " + String.format("%.1f", percentage) + "%",
-                    (float) totalVariable, Color.parseColor("#C492B1")));
         }
 
         pieChart.startAnimation();
