@@ -49,17 +49,35 @@ public class Summary extends AppCompatActivity {
         double totalFixed = Expense.getTotalFixedExpenses();
         double totalLoan = Expense.getTotalLoanCredits();
         double totalVariable = Expense.getTotalVariableExpenses();
+        double totalBudget = totalIncome + totalFixed + totalLoan + totalVariable;
+        if (totalBudget == 0) return;
 
         pieChart.clearChart();
 
-        if (totalIncome > 0)
-            pieChart.addPieSlice(new PieModel("Income", (float) totalIncome, Color.parseColor("#B8E1FF")));
-        if (totalFixed > 0)
-            pieChart.addPieSlice(new PieModel("Fixed", (float) totalFixed, Color.parseColor("#087E8B")));
-        if (totalLoan > 0)
-            pieChart.addPieSlice(new PieModel("Loan/Credit", (float) totalLoan, Color.parseColor("#FFF275")));
-        if (totalVariable > 0)
-            pieChart.addPieSlice(new PieModel("Variable", (float) totalVariable, Color.parseColor("#C492B1")));
+        // Lägg till varje kategori i PieChart med procent
+        if (totalIncome > 0) {
+            float percentage = (float) ((totalIncome / totalBudget) * 100);
+            pieChart.addPieSlice(new PieModel("Income " + String.format("%.1f", percentage) + "%",
+                    (float) totalIncome, Color.parseColor("#B8E1FF")));
+        }
+
+        if (totalFixed > 0) {
+            float percentage = (float) ((totalFixed / totalBudget) * 100);
+            pieChart.addPieSlice(new PieModel("Fixed " + String.format("%.1f", percentage) + "%",
+                    (float) totalFixed, Color.parseColor("#087E8B")));
+        }
+
+        if (totalLoan > 0) {
+            float percentage = (float) ((totalLoan / totalBudget) * 100);
+            pieChart.addPieSlice(new PieModel("Loan/Credit " + String.format("%.1f", percentage) + "%",
+                    (float) totalLoan, Color.parseColor("#FFF275")));
+        }
+
+        if (totalVariable > 0) {
+            float percentage = (float) ((totalVariable / totalBudget) * 100);
+            pieChart.addPieSlice(new PieModel("Variable " + String.format("%.1f", percentage) + "%",
+                    (float) totalVariable, Color.parseColor("#C492B1")));
+        }
 
         pieChart.startAnimation();
     }

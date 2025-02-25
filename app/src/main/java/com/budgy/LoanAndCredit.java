@@ -71,7 +71,7 @@ public class LoanAndCredit extends AppCompatActivity implements ExpenseList.OnEx
     public void onDeleteExpense(int position) {
         Expense.removeLoanCreditExpense(position);
 
-        // Uppdatera listan efter borttagning
+        //Uppdatera listan efter borttagning
         expenses.clear();
         expenses.addAll(Expense.getLoanCreditExpenses());
         adapter.notifyDataSetChanged();
