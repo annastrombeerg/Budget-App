@@ -50,7 +50,7 @@ public class Summary extends AppCompatActivity {
                 (Expense.getTotalFixedExpenses() +
                         Expense.getTotalLoanCredits() +
                         Expense.getTotalVariableExpenses());
-        balanceView.setText(balance + " KR");
+        balanceView.setText((balance >= 0 ? "+" : "") + balance + " KR");
 
         /**
          * Navigerar tillbaka till startskärmen och återställer alla budgetdata.
@@ -106,13 +106,13 @@ public class Summary extends AppCompatActivity {
             float loanPercent = (float) ((totalLoan / totalBudget) * 100);
             float variablePercent = (float) ((totalVariable / totalBudget) * 100);
 
-            // Uppdatera TextViews med procent
+            //Uppdatera TextViews med procent
             incomePercentage.setText("Income: " + String.format("%.1f", incomePercent) + "%");
             fixedPercentage.setText("Fixed: " + String.format("%.1f", fixedPercent) + "%");
             loanPercentage.setText("Loan/Credit: " + String.format("%.1f", loanPercent) + "%");
             variablePercentage.setText("Variable: " + String.format("%.1f", variablePercent) + "%");
 
-            // Lägg till "slices" i PieChart
+            //Lägg till "slices" i PieChart
             if (totalIncome > 0)
                 pieChart.addPieSlice(new PieModel("Income", (float) totalIncome, Color.parseColor("#B8E1FF")));
             if (totalFixed > 0)
