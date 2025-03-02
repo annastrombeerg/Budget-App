@@ -12,7 +12,7 @@
     <string name="fixed_pie">FIXED: 0%</string>
     <string name="loanncred_pie">LOAN|CREDIT: 0%</string>
     <string name="variable_pie">VARIABLE: 0%</string>
-    <string name="make">MAKE BUDGET</string>
+    <string name="make">CALCULATE BUDGY</string>
     <string name="expense_name">Expense Name</string>
     <string name="variable_expense">ADD VARIABLE EXPENSES</string>
     <string name="fixed_expense">ADD FIXED EXPENSES</string>
