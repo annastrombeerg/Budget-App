@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -152,7 +153,7 @@
         android:layout_marginTop="120dp"
         android:background="@color/purple"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -167,32 +168,84 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <Button
+        <LinearLayout
             android:id="@+id/start_over_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="@string/start_over"
-            android:textColor="@color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/income_button"/>
+            app:layout_constraintEnd_toStartOf="@+id/income_button">
 
-        <Button
+            <ImageView
+                android:id="@+id/start_over_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/restart" />
+            <TextView
+                android:id="@+id/start_over_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_over"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/income_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="@string/income"
-            android:textColor="@color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintStart_toEndOf="@+id/start_over_button"
-            app:layout_constraintEnd_toStartOf="@+id/expenses_button"/>
+            app:layout_constraintEnd_toStartOf="@+id/expenses_button">
+            <ImageView
+                android:id="@+id/income_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/profit" />
+            <TextView
+                android:id="@+id/income_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/income"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"/>
+        </LinearLayout>
 
-        <Button
+        <LinearLayout
             android:id="@+id/expenses_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="@string/expense"
-            android:textColor="@color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintStart_toEndOf="@+id/income_button"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent">
+            <ImageView
+                android:id="@+id/expense_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/spending" />
+            <TextView
+                android:id="@+id/expense_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expense"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"/>
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

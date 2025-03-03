@@ -3,13 +3,11 @@ package com.budgy;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
-
-import java.util.ArrayList;
 
 /**
  * Summary är en aktivitet som visar en sammanfattning av användarens budget.
@@ -18,7 +16,7 @@ import java.util.ArrayList;
  * eller börja om processen.
  */
 public class Summary extends AppCompatActivity {
-    Button startOver, income, expenses;
+    LinearLayout startOver, income, expenses;
     PieChart pieChart;
     TextView balanceView;
 
