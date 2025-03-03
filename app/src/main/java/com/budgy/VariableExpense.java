@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class VariableExpense extends AppCompatActivity implements ExpenseList.OnExpenseDeleteListener{
     EditText expenseName, expenseAmount;
-    Button addExpense, makeButton;
+    Button addExpense, calculateButton;
     RecyclerView expenseList;
     TextView totalExpense;
     ExpenseList adapter;
@@ -39,7 +39,7 @@ public class VariableExpense extends AppCompatActivity implements ExpenseList.On
         expenseName = findViewById(R.id.expense_name);
         expenseAmount = findViewById(R.id.expense_amount);
         addExpense = findViewById(R.id.add_expense_button);
-        makeButton = findViewById(R.id.make_button);
+        calculateButton = findViewById(R.id.calculate_button);
         expenseList = findViewById(R.id.expense_list);
         totalExpense = findViewById(R.id.total_expense);
 
@@ -77,9 +77,9 @@ public class VariableExpense extends AppCompatActivity implements ExpenseList.On
         });
 
         /**
-         * Hanterar klick på "Make"-knappen och navigerar till sammanfattningssidan där allt summeras.
+         * Hanterar klick på "Calculate"-knappen och navigerar till sammanfattningssidan där allt summeras.
          */
-        makeButton.setOnClickListener(v -> {
+        calculateButton.setOnClickListener(v -> {
             //Navigera till nästa sida
             Intent intent = new Intent(VariableExpense.this, Summary.class);
             startActivity(intent);

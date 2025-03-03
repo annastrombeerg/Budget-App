@@ -89,7 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/total_expense" />
 
     <Button
-        android:id="@+id/make_button"
+        android:id="@+id/calculate_button"
         style="@style/ToTheEndButton"
         android:layout_width="320dp"
         android:layout_height="53dp"
