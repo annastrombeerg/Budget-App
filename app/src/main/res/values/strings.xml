@@ -4,9 +4,9 @@
     <string name="add">ADD</string>
     <string name="budget">BUDGET</string>
     <string name="balance">BALANCE</string>
-    <string name="expense">EXPENSES</string>
+    <string name="expense">CHANGE EXPENSES</string>
     <string name="start_over">START OVER</string>
-    <string name="income">INCOME</string>
+    <string name="income">CHANGE INCOME</string>
     <string name="income_back">Back To Chart</string>
     <string name="next">NEXT</string>
     <string name="income_pie">INCOME: 0%</string>
