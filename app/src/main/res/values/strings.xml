@@ -7,6 +7,7 @@
     <string name="expense">EXPENSES</string>
     <string name="start_over">START OVER</string>
     <string name="income">INCOME</string>
+    <string name="income_back">Back To Chart</string>
     <string name="next">NEXT</string>
     <string name="income_pie">INCOME: 0%</string>
     <string name="fixed_pie">FIXED: 0%</string>

@@ -48,9 +48,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/income" />
 
+
+    <Button
+        android:id="@+id/back_to_chart"
+        style="@style/ToTheEndButton"
+        android:layout_width="320dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="148dp"
+        android:text="@string/income_back"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:visibility="gone"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/income_amount" />
+
     <Button
         android:id="@+id/next_button"
-        style="@style/BudgyButton"
+        style="@style/NextButton"
         android:layout_width="320dp"
         android:layout_height="53dp"
         android:layout_marginTop="220dp"
@@ -59,7 +75,6 @@
         android:textSize="25sp"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/income_amount" />
 

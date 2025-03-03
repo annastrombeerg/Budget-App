@@ -20,12 +20,17 @@
         <item name="android:navigationBarColor">@color/purple</item>
 
         <!-- Customizing Button Styles -->
-        <item name="android:buttonStyle">@style/BudgyButton</item>
+        <item name="android:buttonStyle">@style/NextButton</item>
     </style>
 
     <!-- Button Style -->
-    <style name="BudgyButton" parent="Widget.MaterialComponents.Button">
+    <style name="NextButton" parent="Widget.MaterialComponents.Button">
         <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ToTheEndButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/lightblue</item>
         <item name="android:textColor">@color/black</item>
     </style>
 </resources>

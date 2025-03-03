@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,8 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
  * Den hanterar inmatning, formatering av text samt navigering till nästa steg i budgetprocessen.
  */
 public class Income extends AppCompatActivity {
-    Button nextButton;
+    Button nextButton, backToChartButton;
     EditText income;
+    boolean cameFromSummary = false;
 
     /**
      * Körs när aktiviteten skapas. Initierar layout och komponenter,
@@ -29,10 +31,17 @@ public class Income extends AppCompatActivity {
 
         nextButton = findViewById(R.id.next_button);
         income = findViewById(R.id.income_amount);
+        backToChartButton = findViewById(R.id.back_to_chart);
 
         if (Expense.getIncome() > 0) {
             income.setText(String.valueOf(Expense.getIncome()));
         }
+
+        //Hämta flagga från Intent (om användaren kom från Summary)
+        cameFromSummary = getIntent().getBooleanExtra("cameFromSummary", false);
+
+        //Sätt knappen osynlig i början
+        backToChartButton.setVisibility(cameFromSummary ? View.VISIBLE : View.GONE);
 
         /**
          * Hanterar klick på "Next"-knappen.
@@ -40,13 +49,19 @@ public class Income extends AppCompatActivity {
          * och navigerar sedan till nästa aktivitet.
          */
         nextButton.setOnClickListener(v -> {
-            double incomeValue = 0;
-            if (!income.getText().toString().isEmpty()) {
-                incomeValue = Double.parseDouble(income.getText().toString().replace(" KR", "").trim());
-            }
-            Expense.setIncome(incomeValue);
+            saveIncome();
             //Navigera till nästa sida
             Intent intent = new Intent(Income.this, FixedExpense.class);
+            startActivity(intent);
+        });
+
+        /**
+         * Hanterar klick på "Back to Chart"-knappen.
+         * Sparar inkomsten och navigerar direkt tillbaka till PieChart-sidan.
+         */
+        backToChartButton.setOnClickListener(v -> {
+            saveIncome();
+            Intent intent = new Intent(Income.this, Summary.class);
             startActivity(intent);
         });
 
@@ -66,7 +81,7 @@ public class Income extends AppCompatActivity {
 
             /**
              * Anropas när texten ändras i EditText.
-             * Här används den inte, men inkluderas som en del av TextWatcher-gränssnittet.
+             * I denna implementering används den inte, men måste inkluderas eftersom den är en del av TextWatcher-gränssnittet.
              */
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
@@ -89,5 +104,16 @@ public class Income extends AppCompatActivity {
                 isEditing = false;
             }
         });
+    }
+
+    /**
+     * Sparar inkomsten från EditText till Expense-klassen.
+     */
+    private void saveIncome() {
+        double incomeValue = 0;
+        if (!income.getText().toString().isEmpty()) {
+            incomeValue = Double.parseDouble(income.getText().toString().replace(" KR", "").trim());
+        }
+        Expense.setIncome(incomeValue);
     }
 }

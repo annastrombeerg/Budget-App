@@ -62,7 +62,11 @@ public class Summary extends AppCompatActivity {
         /**
          * Navigerar till Income-aktiviteten när användaren trycker på "Income"-knappen.
          */
-        income.setOnClickListener(v -> startActivity(new Intent(Summary.this, Income.class)));
+        income.setOnClickListener(v -> {
+            Intent intent = new Intent(Summary.this, Income.class);
+            intent.putExtra("cameFromSummary", true); //Skickar flagga att användaren kom från Summary
+            startActivity(intent);
+        });
 
         /**
          * Navigerar till FixedExpense-aktiviteten när användaren trycker på "Expenses"-knappen.
